@@ -1,0 +1,72 @@
+# Doesn't work here... copy this in setup of template!!! 
+# Start copy here
+### Begin of the Travelguide Plugin Configuration
+#plugin.tx_travelguide_pi1 {
+#        parseFunc < tt_content.text.20.parseFunc
+#} 
+### End of the Travelguide Plugin Configuration
+# until here 
+
+plugin.tx_travelguide_pi1 {
+	CMD = 
+	pidList = 
+	recursive = 
+                PidSingle = {$Pid_Single}
+                PidMap = {$Pid_Map}
+                PidSearch = {$Pid_Search}
+                AltLangID = {$AltLang}
+}
+
+plugin.tx_travelguide_pi1.listView {
+	results_at_a_time = {$results_at_a_time}
+	maxPages = {$maxPages}
+}
+
+# Example of default set CSS styles (these go into the document header):
+plugin.tx_travelguide_pi1._CSS_DEFAULT_STYLE (
+
+ .tx-travelguide-pi1 { margin-top: 0px; margin-bottom: 0px; } /* main plugin css */
+
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView {} /* main list view css, also used in single and map views */
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-cat {}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-cat A{}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-cat A:hover{}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-logo {}	
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-name{}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-name A{}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-name A:hover{}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-address {}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-place {}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-tel {}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-fax {}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-email {}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-site {}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-site A{}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-site A:hover{}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-desc {}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-desc A{}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-desc A:hover{}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-reachus {}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-reachus A{}
+ .tx-travelguide-pi1 tx-travelguide-pi1-listView tx-travelguide-pi1-listrowField-reachus A:hover{}
+
+ .tx-travelguide-pi1 tx-travelguide-pi1-singleView {} /* main single view css */
+ .tx-travelguide-pi1 tx-travelguide-pi1-singleView tx-travelguide-pi1-singleViewField-par1 {}
+ .tx-travelguide-pi1 tx-travelguide-pi1-singleView tx-travelguide-pi1-singleViewField-par2 {}
+ .tx-travelguide-pi1 tx-travelguide-pi1-singleView tx-travelguide-pi1-singleViewField-par3 {}
+ .tx-travelguide-pi1 tx-travelguide-pi1-singleView tx-travelguide-pi1-singleViewField-par4 {}
+ .tx-travelguide-pi1 tx-travelguide-pi1-singleView tx-travelguide-pi1-singleViewField-foto1 {}
+ .tx-travelguide-pi1 tx-travelguide-pi1-singleView tx-travelguide-pi1-singleViewField-foto2 {}
+ .tx-travelguide-pi1 tx-travelguide-pi1-singleView tx-travelguide-pi1-singleViewField-foto3 {}
+
+ .tx-travelguide-pi1 tx-travelguide-pi1-mapView {} /* main map view css */
+ .tx-travelguide-pi1 tx-travelguide-pi1-mapView tx-travelguide-pi1-mapViewField-par5 {}	
+ .tx-travelguide-pi1 tx-travelguide-pi1-mapView tx-travelguide-pi1-mapViewField-map {}
+)
+
+  # Example of how to overrule LOCAL_LANG values for the plugin:
+#plugin.tx_travelguide_pi1._LOCAL_LANG.default {
+#  pi_list_searchBox_search = Search!
+#}
+  # Example of how to set default values from TS in the incoming array, $this->piVars of the plugin:
+#plugin.tx_travelguide_pi1._DEFAULT_PI_VARS.test = test

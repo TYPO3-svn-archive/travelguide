@@ -1,0 +1,18 @@
+
+#Page id of the single view, if no pid is set then the single view is show in the same page
+Pid_Single = 
+
+#Page id of the map view, if no pid is set then the single view is show in the same page
+Pid_Map = 
+
+#Page id of the search engine, the search page must have no cache
+Pid_Search = 
+
+#the language ID you want to abilitate, for example: english (default) = 0, italian = 1, german = 2
+#this is because there is only an "alternative language", while you can set more than one language for your multi-language site.
+AltLang = 1
+
+#Results at a time in the list view
+results_at_a_time = 15
+#max pages for results
+maxPages = 10
